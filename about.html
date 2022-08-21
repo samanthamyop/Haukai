@@ -1,0 +1,136 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>The Haukai</title>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link
+     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
+     rel="stylesheet">
+   <link rel="stylesheet" href="css/main.css">
+
+ </head>
+
+ <body>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            The Haukai Restaurant
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="reservation.html">Reservations</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+
+
+   <section>
+     <div class="container">
+       <h2 class="text-center">The story of The Haukai Restaurant</h2>
+       <div class="split">
+         <div>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aperiam inventore nemo, asperiores dolorem
+             nisi voluptate omnis quam sit doloremque expedita architecto dicta, at consequatur.</p>
+         </div>
+         <div>
+            <img src="images/couplecooking.jpg" alt="Owners of the Haukai cooking in their kitchen">
+          </div>
+         <div>
+           <p>Eum quisquam deleniti facere fugit. Vero quidem sunt fuga fugit ea voluptatum placeat ullam eveniet,
+             minima
+             sed veritatis laboriosam. Quia cumque est cupiditate quod eum?</p>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <section>
+    <div class="container">
+      <div class="split">
+        <div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aperiam inventore nemo, asperiores dolorem
+            nisi voluptate omnis quam sit doloremque expedita architecto dicta, at consequatur.</p>
+        </div>
+        <div>
+           <img src="images/maori-wall-carving.jpg" alt="Maori carving on the side of a body of water">
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="split">
+        <div>
+           <img src="images/maori-traditional-man.jpg" alt="Maori man performing the traditional Haka">
+         </div>
+         <div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aperiam inventore nemo, asperiores dolorem
+            nisi voluptate omnis quam sit doloremque expedita architecto dicta, at consequatur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <section class="footer">
+    <ul class="list">
+     <li>
+       <a href="index.html">Home</a>
+     </li>
+     <li>
+       <a href="reservation.html">Reservation</a>
+     </li>
+     <li>
+       <a href="menu.html">Menu</a>
+     </li>
+     <li>
+       <a href="about.html">About</a>
+     </li>
+     <li>
+       <a href="contact.html">Contact</a>
+     </li>
+     <li>
+       <a href="privacy.html">Privacy Policy</a>
+     </li>
+   </ul>
+   <p class="copyright">Ⓒ 2022 - The Haukai Restaurant</p>
+ </section>
+
+ </body>
+ <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+ </html>

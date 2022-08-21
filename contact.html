@@ -1,0 +1,124 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>The Haukai</title>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link
+     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
+     rel="stylesheet">
+   <link rel="stylesheet" href="css/main.css">
+
+ </head>
+
+ <body>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            The Haukai Restaurant
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="reservation.html">Reservations</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+   <section>
+     <div class="container">
+       <h2 class="text-center">Contact Us</h2>
+       <div class="split">
+         <div>
+          <div class="text-center small-header">About Us</div>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure aperiam inventore nemo, asperiores dolorem
+             nisi voluptate omnis quam sit doloremque expedita architecto dicta, at consequatur.</p>
+         </div>
+         <div>
+          <div class="text-center small-header">Our location</div>
+          <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3259.0954012240895!2d173.9475802162098!3d-35.22899509835824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0bb76f05800a6d%3A0x912328fde4819391!2sHaukai%20Restaurant!5e0!3m2!1sen!2snz!4v1660883769537!5m2!1sen!2snz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          </div>
+       </div>
+     </div>
+   </section>
+
+   <section>
+    <div class="container">
+      <div class="split">
+        <div>
+         <div class="text-center small-header">Opening Hours</div>
+         <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=2&bgcolor=%23ffffff&ctz=Pacific%2FAuckland&showTitle=1&showPrint=0&showCalendars=0&showTz=1&showTabs=0&title=Opening%20hours&src=Mm1rN2psbzFhYjdkNTM3NW04cnBvN2M1b29AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%237986CB" style="border-width:0" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+</div>
+        <div>
+         <div class="text-center small-header">Contact Us</div>
+         <div>
+         <p>1 Island Street, KeriKeri, Bay of Islands</p> 
+         <p>+64-09-401-4019</p>
+         <p>contact@thehaukai.co.nz</p>
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <section class="footer">
+     <ul class="list">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="reservation.html">Reservation</a>
+      </li>
+      <li>
+        <a href="menu.html">Menu</a>
+      </li>
+      <li>
+        <a href="about.html">About</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+      <li>
+        <a href="privacy.html">Privacy Policy</a>
+      </li>
+    </ul>
+    <p class="copyright">Ⓒ 2022 - The Haukai Restaurant</p>
+  </section>
+
+ </body>
+ <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+ </html>

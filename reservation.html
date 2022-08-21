@@ -1,0 +1,93 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>The Haukai</title>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link
+     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap"
+     rel="stylesheet">
+   <link rel="stylesheet" href="css/main.css">
+
+ </head>
+
+ <body>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            The Haukai Restaurant
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="reservation.html">Reservations</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+   <section>
+       <h2 class="text-center">Reservations</h2>
+       <p class="text-center">Opening hours: Wednesday - Sunday 11:00 - late</p>
+       <div class="text-center">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfkEje7pMd3f6lsT_lmEGcFvfAH9VHzQOmtx49_EscSo7pgPA/viewform?embedded=true" width="440" height="886" frameborder="0" marginheight="0" marginwidth="0" alt="Reservation form">Loading…</iframe>
+      </div>
+   </section>
+
+   <section class="footer">
+    <ul class="list">
+     <li>
+       <a href="index.html">Home</a>
+     </li>
+     <li>
+       <a href="reservation.html">Reservation</a>
+     </li>
+     <li>
+       <a href="menu.html">Menu</a>
+     </li>
+     <li>
+       <a href="about.html">About</a>
+     </li>
+     <li>
+       <a href="contact.html">Contact</a>
+     </li>
+     <li>
+       <a href="privacy.html">Privacy Policy</a>
+     </li>
+   </ul>
+   <p class="copyright">Ⓒ 2022 - The Haukai Restaurant</p>
+ </section>
+
+ </body>
+ <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+ </html>
